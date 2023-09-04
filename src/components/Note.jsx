@@ -1,13 +1,17 @@
 import React from "react";
-import notesData from "../note";
 
-const Note = () => {
-  return notesData.map((note) => (
-    <div className="note" key={note.key}>
-      <h1>{note.title}</h1>
-      <p>{note.content}</p>
+function Note(props) {
+  function handleClick() {
+    props.onDelete(props.id);
+  }
+
+  return (
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}>DELETE</button>
     </div>
-  ));
-};
+  );
+}
 
 export default Note;
