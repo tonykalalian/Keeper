@@ -4,7 +4,10 @@ const Year = Time.getFullYear();
 const Footer = () => {
   return (
     <footer>
-      <p>&copy;{Year},All right are reserved</p>
+      <p>
+        Tony Kalalian <br />
+        &copy;{Year},All right are reserved
+      </p>
     </footer>
   );
 };
